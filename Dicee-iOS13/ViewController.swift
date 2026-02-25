@@ -30,19 +30,16 @@ class ViewController: UIViewController {
         leftDiceNumber = Int.random(in: 0...5)
         rightDiceNumber = Int.random(in: 0...5)
         
-        diceImageViewOne.image = [UIImage(imageLiteralResourceName: "DiceOne"),
-         UIImage(imageLiteralResourceName: "DiceTwo"),
-         UIImage(imageLiteralResourceName: "DiceThree"),
-         UIImage(imageLiteralResourceName: "DiceFour"),
-         UIImage(imageLiteralResourceName: "DiceFive"),
-                                  UIImage(imageLiteralResourceName: "DiceSix")][leftDiceNumber]
-        
-        diceImageViewTwo.image = [UIImage(imageLiteralResourceName: "DiceOne"),
-         UIImage(imageLiteralResourceName: "DiceTwo"),
-         UIImage(imageLiteralResourceName: "DiceThree"),
-         UIImage(imageLiteralResourceName: "DiceFour"),
-         UIImage(imageLiteralResourceName: "DiceFive"),
-                                  UIImage(imageLiteralResourceName: "DiceSix")][rightDiceNumber]
+        var diceImageArray  = [UIImage(imageLiteralResourceName: "DiceOne"),
+                          UIImage(imageLiteralResourceName: "DiceTwo"),
+                          UIImage(imageLiteralResourceName: "DiceThree"),
+                          UIImage(imageLiteralResourceName: "DiceFour"),
+                          UIImage(imageLiteralResourceName: "DiceFive"),
+                                                   UIImage(imageLiteralResourceName: "DiceSix")]
+        // Assign the dice one image a random number
+        diceImageViewOne.image = diceImageArray[leftDiceNumber]
+        // Assign the dice one image a random number
+        diceImageViewTwo.image = diceImageArray[rightDiceNumber]
         
         
         
